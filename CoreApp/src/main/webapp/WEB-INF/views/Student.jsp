@@ -35,7 +35,7 @@
 
             <div class="form-group">
                 <form:label path="id">Please enter Student Id</form:label>
-                <form:input id="id" name="id" path="id" class="form-control" placeholder="Enter ID"/>
+                <form:input id="id" type="number" name="id" path="id" class="form-control" placeholder="Enter ID"/>
                 <form:errors path="id" class="error"/>
             </div>
 
