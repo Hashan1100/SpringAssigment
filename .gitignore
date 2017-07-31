@@ -1,0 +1,6 @@
+# Igonored file paths
+**/.idea/
+**/target/
+
+# Igored file types
+*.iml
