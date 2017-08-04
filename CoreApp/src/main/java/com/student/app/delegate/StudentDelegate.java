@@ -1,6 +1,6 @@
 package com.student.app.delegate;
 
-import com.example.services.service.UserService;
+import com.student.app.service.UserService;
 
 public class StudentDelegate
 {

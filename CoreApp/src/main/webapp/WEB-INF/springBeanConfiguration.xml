@@ -16,7 +16,16 @@
         <property name="userService" ref="userService"></property>
     </bean>
 
-    <bean id="userService" class="com.example.services.service.UserServiceImpl"/>
+    <bean id="userService" class="com.student.app.service.UserServiceImpl"/>
+
+    <bean id="dataSource"
+          class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+        <property name="url" value="jdbc:mysql://localhost:3306/student_dbo" />
+        <property name="username" value="root" />
+        <property name="password" value="sniper" />
+    </bean>
+
 
 </beans>
 

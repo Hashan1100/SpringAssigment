@@ -1,4 +1,4 @@
-package com.example.services.service;
+package com.student.app.service;
 
 import java.sql.SQLException;
 

@@ -1,6 +1,4 @@
-package com.example.services.service;
-
-import java.sql.SQLException;
+package com.student.app.service;
 
 public class UserServiceImpl implements UserService
 {
@@ -18,7 +16,7 @@ public class UserServiceImpl implements UserService
     }*/
 
 
-    public boolean isValidStudent(String studentId) throws SQLException
+    public boolean isValidStudent(String studentId)
     {
         if(Integer.parseInt(studentId) >= 1000 && Integer.parseInt(studentId) <= 10000){
             return true;
