@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -43,6 +44,8 @@ public class StudentController
                 return "include";
             }
 
+            studentDelegate.getUserService().insertStudentData(student);
+
             model.addAttribute("student", student);
 
         }
@@ -51,6 +54,14 @@ public class StudentController
             e.printStackTrace();
         }
         return "welcome";
+    }
+
+    @RequestMapping(value="/student_all",method=RequestMethod.GET)
+    public String getStudentList(Model model)
+    {
+        ArrayList<Student> studentList = studentDelegate.getUserService().getAllStudents();
+        model.addAttribute("studentlist", studentList);
+        return "StudentAll";
     }
 
     @ModelAttribute("genderList")

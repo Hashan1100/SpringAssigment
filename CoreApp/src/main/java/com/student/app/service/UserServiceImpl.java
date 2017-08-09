@@ -1,20 +1,31 @@
 package com.student.app.service;
 
+import com.example.services.domain.Student;
+import com.example.services.repositories.StudentMongoRepositoryImpl;
+import com.example.services.repositories.StudentRepository;
+import com.example.services.repositories.StudentRepositoryImpl;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import java.util.ArrayList;
+import java.util.Map;
+
 public class UserServiceImpl implements UserService
 {
 
-    //private UserDao userDao;
+    @Autowired
+    private StudentRepositoryImpl studentRepo;
 
-    public void getUserDao()
-    {
+    @Autowired
+    private StudentMongoRepositoryImpl studentMongoRepo;
 
+    public void insertStudentData(Student student){
+        studentMongoRepo.save(student);
     }
-/*
-    public void setUserDao(UserDao userDao)
-    {
-        this.userDao = userDao;
-    }*/
 
+    public ArrayList<Student> getAllStudents(){
+
+        return (ArrayList<Student>) studentMongoRepo.findAll();
+    }
 
     public boolean isValidStudent(String studentId)
     {
@@ -25,5 +36,4 @@ public class UserServiceImpl implements UserService
         }
 
     }
-
 }

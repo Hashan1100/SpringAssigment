@@ -2,6 +2,7 @@ package com.example.services.domain;
 
 import org.hibernate.validator.constraints.NotEmpty;
 import javax.validation.constraints.Size;
+import java.util.Date;
 
 /**
  * Created by hashan on 7/27/17.
@@ -16,7 +17,7 @@ public class Student {
 
     private String[] gendar;
 
-    private String birthday;
+    private Date birthday;
 
     private String address;
 
@@ -44,11 +45,11 @@ public class Student {
         this.gendar = gendar;
     }
 
-    public String getBirthday() {
+    public Date getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(String birthday) {
+    public void setBirthday(Date birthday) {
         this.birthday = birthday;
     }
 
